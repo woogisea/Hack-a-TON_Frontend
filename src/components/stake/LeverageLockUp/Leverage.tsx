@@ -3,8 +3,8 @@ import Step from "../common/Step";
 import Title from "../common/Title";
 import SliderBox from "./Slider/SliderBox";
 import StatusDetail from "../../common/StatusDetail";
-import IcBlackArrowDown from "../../../assets/icons/ic_black_arrow_down.svg";
-import IcBlackArrowUp from "../../../assets/icons/ic_black_arrow_up.svg";
+import IcBlackArrowDown from "../../../assets/icons/Stake/ic_black_arrow_down.svg";
+import IcBlackArrowUp from "../../../assets/icons/Stake/ic_black_arrow_up.svg";
 import { useState } from "react";
 
 interface Step2Props {
@@ -14,15 +14,15 @@ interface Step2Props {
   setRatio: (ratio: number) => void;
   setMaxLeverage: (maxLeverage: number) => void;
 }
-const Step2 = (props: Step2Props) => {
+const Leverage = (props: Step2Props) => {
   const { input, maxLeverage, setMaxLeverage, ratio, setRatio } = props;
   const [isOpenSlider, setIsOpenSlider] = useState(false);
 
   return (
-    <Step2Wrapper>
+    <LeverageWrapper>
       <Step title="Step 3" type="leverage" />
       <TitleBox>
-        <Title title="Set Leverage  Multiplier" type="step3" />
+        <Title title="Check Leverage  Multiplier" type="step3" />
       </TitleBox>
       <LeverageBox>
         Leverage
@@ -54,13 +54,13 @@ const Step2 = (props: Step2Props) => {
           />
         </>
       )}
-    </Step2Wrapper>
+    </LeverageWrapper>
   );
 };
 
-export default Step2;
+export default Leverage;
 
-const Step2Wrapper = styled.div`
+const LeverageWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
